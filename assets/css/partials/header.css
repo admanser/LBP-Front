@@ -1,0 +1,17 @@
+header {
+  background-color: var(--bg-solid-1);
+  padding: var(--spacing-36);
+  color: var(--secondary-solid);
+  font-family: var(--base-font);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar_logo {
+  max-width: 100%;
+}
