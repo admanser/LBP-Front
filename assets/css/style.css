@@ -1,1 +1,14 @@
 @import url("./normalize.css");
+@import url("./footer.css");
+
+header {
+  height: 20%;
+}
+
+main {
+  height: 65%;
+}
+
+footer {
+  height: 15%;
+}
