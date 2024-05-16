@@ -1,4 +1,4 @@
-header {
+/* header {
   background-color: var(--bg-solid-1);
   padding: var(--spacing-36);
   color: var(--secondary-solid);
@@ -14,4 +14,334 @@ header {
 
 .navbar_logo {
   max-width: 100%;
+} */
+
+@import url("./normalize.css");
+
+* {
+  font-family: var(--base-font);
+}
+#loginModal {
+  display: none;
+}
+
+/* Formato navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribucion horizontal */
+  align-items: center; /* Alineacion vertical*/
+  background-color: var(--bg-solid-1);
+  background-image: linear-gradient(
+    var(--bg-solid-1),
+    var(--secondary-300)
+  ); /*Efecto degrade*/
+  padding: 10px 20px;
+}
+
+/* Formato logo */
+.Logo img {
+  display: block;
+  width: 140px;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 1px var(--secondary-500);
+}
+
+/* Formato menú */
+.menu > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul > li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.menu ul li > a {
+  text-decoration: none;
+  color: var(--secondary-solid);
+}
+
+.menu ul li a:hover {
+  color: var(--bg-solid-3);
+}
+/*Menu desplegable Productos*/
+.dropdown-items {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 var(--primary-300);
+  z-index: 1;
+  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
+}
+
+.dropdown-items > a {
+  color: var(--secondary-solid);
+  padding: 12px 16px;
+  text-decoration: solid;
+  display: block;
+  font-size: x-small;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+}
+
+/* Formato iniciar sesión */
+.login-link {
+  display: flex;
+  align-items: center;
+}
+
+.login > a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--secondary-solid);
+  background-color: var(--secondary-300);
+  padding: 8px;
+  border-radius: 30px;
+  border: 2px solid var(--secondary-solid);
+  font-size: small;
+}
+
+.login a:hover {
+  background-color: var(--primary-solid);
+}
+
+/*Icono login*/
+.material-symbols-outlined {
+  margin-right: 5px;
+  font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Ventana Inicio sesion */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--primary-500);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+  background-color: var(--primary-900);
+  margin: 10% auto;
+  padding: 20px;
+  border: 5px inset var(--secondary-300);
+  width: 50%;
+  background-color: var(--bg-solid-1); /* Color de fondo del navbar */
+  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
+}
+
+.modal-content > h2 {
+  color: var(--secondary-solid);
+  font-size: x-large;
+  text-align: center;
+  padding: 30px;
+}
+
+.modal-content > p {
+  color: var(--secondary-solid);
+  font-size: smaller;
+  text-align: center;
+  padding: 30px;
+}
+
+.modal-content p > a {
+  font-size: medium;
+  text-align: center;
+  padding: 10px;
+}
+
+.close {
+  color: var(--secondary-500);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-solid);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Formato del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  margin: 10px;
+  padding: 8px;
+  width: 300px;
+  border: 2px solid var(--primary-300);
+}
+
+button {
+  background-color: #007bff;
+  color: var(--secondary-solid);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/*Responsive dispositivo*/
+
+@media (width < 500px) {
+  navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .Logo img {
+    width: 60px;
+    height: 35px;
+    border-radius: 1px;
+    box-shadow: 0 0 6px 1px var(--secondary-500);
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Formato menú*/
+  .menu > ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .menu ul > li {
+    margin-right: 0px;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .menu ul li > a {
+    font-size: smaller;
+  }
+
+  .dropdown-items {
+    background-color: var(--primary-solid);
+    width: min-content;
+    height: min-content;
+  }
+
+  .dropdown-items > a {
+    color: var(--secondary-solid);
+    padding: 6px 12px;
+    text-decoration: solid;
+    display: block;
+    font-size: x-small;
+  }
+
+  .login {
+    padding: 1px 16px;
+    font-size: x-small;
+    width: min-content;
+    height: min-content;
+  }
+
+  .login > a {
+    margin-right: 1px;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 30px;
+    border: 2px solid var(--secondary-solid);
+    font-size: small;
+  }
+
+  /*Ventana Inicio de Sesion*/
+  .modal {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+  }
+
+  .modal-content {
+    margin: auto;
+    padding: 2px;
+    width: min-content;
+    height: min-content;
+    align-content: center;
+  }
+
+  .modal-content > h2 {
+    font-size: larger;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .modal-content > p {
+    font-size: x-small;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .modal-content p > a {
+    font-size: small;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: var(--primary-solid);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Formato del formulario */
+  form {
+    gap: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: x-small;
+  }
+
+  button {
+    border-radius: 10px;
+    padding: 8px;
+    width: 100px;
+  }
 }

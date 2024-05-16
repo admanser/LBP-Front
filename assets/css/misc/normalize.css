@@ -21,14 +21,14 @@
   --secondary-300: rgba(255, 255, 255, 0.3);
 
   --bg-solid-1: #000000;
-  --bg-solid-2: #3D0000;
+  --bg-solid-2: #3d0000;
   --bg-solid-3: #950101;
-  --bg-solid-4: #FF0000;
+  --bg-solid-4: #ff0000;
   --bg-solid-5: #d3d3d3;
 
   /* Typography */
-  --base-font: 'Inter', sans-serif;
-  --alternative-font: 'Raleway', sans-serif;
+  --base-font: "Inter", sans-serif;
+  --alternative-font: "Raleway", sans-serif;
 
   /* Font-sizes */
   --font-display: 4em;
@@ -69,5 +69,9 @@ html {
 .container {
   width: 100%;
   padding: 0 10rem 0 10rem;
-
 }
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
