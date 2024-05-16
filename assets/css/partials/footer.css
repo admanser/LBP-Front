@@ -1,0 +1,24 @@
+@import url("./normalize.css");
+
+/* main {
+  height: 400px;
+} */
+
+.containerfooter {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  border-top: 20px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h3 {
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+}
