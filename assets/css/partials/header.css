@@ -41,10 +41,9 @@
 /* Formato logo */
 .Logo img {
   display: block;
-  width: 140px;
-  height: 70px;
-  border-radius: 10px;
-  box-shadow: 0 0 6px 1px var(--secondary-500);
+  width: 100px;
+  height: 90px;
+  margin-left: 30px;
 }
 
 /* Formato menú */
@@ -66,27 +65,6 @@
 
 .menu ul li a:hover {
   color: var(--bg-solid-3);
-}
-/*Menu desplegable Productos*/
-.dropdown-items {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 var(--primary-300);
-  z-index: 1;
-  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
-}
-
-.dropdown-items > a {
-  color: var(--secondary-solid);
-  padding: 12px 16px;
-  text-decoration: solid;
-  display: block;
-  font-size: x-small;
-}
-
-.dropdown:hover .dropdown-items {
-  display: block;
 }
 
 /* Formato iniciar sesión */
@@ -110,10 +88,69 @@
   background-color: var(--primary-solid);
 }
 
-/*Icono login*/
+/*Icon login*/
 .material-symbols-outlined {
   margin-right: 5px;
   font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/*Icon Account*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Formato Icon Account */
+#icon_account {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+#icon_account span {
+  font-size: 40px;
+}
+
+#icon_account span:hover {
+  border-radius: 50%;
+  background-color: var(--primary-solid);
+  box-shadow: 0 0 5px 2px var(--secondary-500);
+}
+
+#icon_account {
+  display: none;
+}
+
+/*Dropdown account*/
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Formato Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: var(--secondary-900);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--primary-solid);
+  z-index: 1;
+}
+
+/* Contenido del Dropdown */
+.dropdown-content a {
+  color: var(--primary-solid);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: var(--primary-300);
+}
+
+/* Muestra el dropdown al hacer click */
+.show {
+  display: block;
 }
 
 /* Ventana Inicio sesion */
@@ -206,7 +243,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/*Responsive dispositivo*/
+/*Responsive DISPOSITIVO con Width < 500px */
 
 @media (width < 500px) {
   navbar {
@@ -250,19 +287,7 @@ button:hover {
     font-size: smaller;
   }
 
-  .dropdown-items {
-    background-color: var(--primary-solid);
-    width: min-content;
-    height: min-content;
-  }
-
-  .dropdown-items > a {
-    color: var(--secondary-solid);
-    padding: 6px 12px;
-    text-decoration: solid;
-    display: block;
-    font-size: x-small;
-  }
+  /*Boton Login*/
 
   .login {
     padding: 1px 16px;
@@ -277,6 +302,20 @@ button:hover {
     padding: 4px;
     border-radius: 30px;
     border: 2px solid var(--secondary-solid);
+    font-size: small;
+  }
+
+  /* Formato Dropdown content */
+  .dropdown-content {
+    right: 0x;
+    z-index: 1;
+    min-width: 120px;
+    background-color: var(--secondary-solid);
+  }
+
+  /* Contenido del Dropdown*/
+  .dropdown-content a {
+    padding: 12px 16px;
     font-size: small;
   }
 

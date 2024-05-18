@@ -20,6 +20,9 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
 
   <body>
@@ -29,21 +32,31 @@
         <div class="menu">        
           <ul>
             <li><a href="">INICIO</a></li>
-            <li class="dropdown"><a href="#">PRODUCTOS</a>
-              <div class="dropdown-items">
-                <a href="#">OJOTAS</a>
-                <a href="#">ALPARGATAS</a>
-              </div></li>
+            <li><a href="#products">PRODUCTOS</a></li>
             <li><a href="">QUIENES SOMOS</a></li>
-            <li><a href="">CONTACTO</a></li>
+            <li><a href="#footer">CONTACTO</a></li>
           </ul>
         </div>
-        <div class="login">
-          <a href="#" onclick=showLogin(event) class="login-link">
-            <span class="material-symbols-outlined">login</span>
-              Iniciar sesión</a>
+        <div>
+          <div id="login" class="login">
+            <a href="#" onclick=showLogin(event) class="login-link">
+              <span class="material-symbols-outlined">login</span>
+                Iniciar sesión</a>
+          </div>
+          <!-- <div id="icon_account">
+            <span onclick="" class="material-symbols-outlined">
+              account_circle
+              </span>
+          </div> -->
+          <div id="icon_account" class="dropdown">
+            <span onclick="toggleDropdown()" class="material-symbols-outlined">
+              account_circle
+            </span>
+            <div id="dropdownContent" class="dropdown-content">
+              <a href="#" onclick=showLoginButton()>Cerrar sesión</a>
+            </div>
+          </div>
         </div>
-
              <!-- Inicio de sesión -->
              <div id="loginModal" class="modal">
               <div class="modal-content">
@@ -120,7 +133,7 @@
     <!-- end of hero -->
 
     <main class="main container">
-      <section class="collection">
+      <section id="products" class="collection">
         <!-- Contenido de la coleccion de productos -->
         <div class="main__tittle">
           <h2>PRODUCTOS</h2>
@@ -311,7 +324,7 @@
       </section>
     </main>
 
-        <footer class="containerfooter">
+        <footer id="footer" class="containerfooter">
       <div>
         <h3>Nosotros</h3>
         <ul>
