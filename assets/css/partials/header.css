@@ -45,6 +45,11 @@
   height: 90px;
   margin-left: 30px;
 }
+/*Menu hamburguesa*/
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
 /* Formato menú */
 .menu > ul {
@@ -255,54 +260,70 @@ button:hover {
     align-items: flex-start;
   }
   .Logo img {
-    width: 60px;
-    height: 35px;
-    border-radius: 1px;
-    box-shadow: 0 0 6px 1px var(--secondary-500);
+    width: 70px;
+    height: 65px;
+    margin-right: 10px;
   }
-
+  /*Menu hamburguesa*/
   .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 85px; /* Ajusta según la altura de tu navbar */
+    right: 0;
+    background-color: var(--primary-300);
+    width: 100%;
+    box-shadow: 0 8px 16px var(--secondary-300);
+    z-index: 1;
   }
 
-  /* Formato menú*/
   .menu > ul {
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .menu ul > li {
-    margin-right: 0px;
-    align-items: center;
-    margin-bottom: 5px;
+    text-align: left;
+    padding: 5px 10px;
+    list-style: none;
   }
 
   .menu ul li > a {
-    font-size: smaller;
+    display: block;
+    padding: 2px 5px;
+    text-decoration: none;
+    color: var(--secondary-solid);
+    font-size: small;
+  }
+
+  .menu li > a:hover {
+    background-color: var(--secondary-solid);
+  }
+
+  .menu-icon {
+    display: block;
   }
 
   /*Boton Login*/
-
   .login {
-    padding: 1px 16px;
-    font-size: x-small;
-    width: min-content;
-    height: min-content;
+    text-align: right;
+    justify-content: right;
+  }
+  .login a {
+    margin-right: 0;
+  }
+  .login a > p {
+    display: none;
   }
 
-  .login > a {
-    margin-right: 1px;
-    text-decoration: none;
-    padding: 4px;
-    border-radius: 30px;
-    border: 2px solid var(--secondary-solid);
-    font-size: small;
+  /*Icon Account*/
+
+  #icon_account {
+    text-align: right;
+    justify-content: right;
+    margin-right: 0;
   }
 
   /* Formato Dropdown content */
@@ -324,15 +345,13 @@ button:hover {
     overflow: auto;
     justify-content: center;
     align-items: center;
-    top: 50px;
   }
 
   .modal-content {
-    margin: auto;
+    margin-top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
     padding: 2px;
-    width: min-content;
-    height: min-content;
-    align-content: center;
   }
 
   .modal-content > h2 {
@@ -364,7 +383,7 @@ button:hover {
     cursor: pointer;
   }
 
-  /* Formato del formulario */
+  /* Formato del formulario Login*/
   form {
     gap: 15px;
   }

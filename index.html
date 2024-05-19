@@ -21,57 +21,70 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
     <!-- Icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
 
   <body>
     <header>
       <div class="navbar">
-        <div class="Logo"><a href="index.html"><img src="./assets/multimedia/img/logoLbp.svg" alt=""></a></div>
-        <div class="menu">        
+        <div class="menu-icon" id="menu-icon">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="Logo">
+          <a href="index.html"
+            ><img src="./assets/multimedia/img/logoLbp.svg" alt=""
+          /></a>
+        </div>
+        <div class="menu" id="menu">
           <ul>
-            <li><a href="">INICIO</a></li>
-            <li><a href="#products">PRODUCTOS</a></li>
-            <li><a href="">QUIENES SOMOS</a></li>
-            <li><a href="#footer">CONTACTO</a></li>
+            <li><a href="./index.html" onclick="toggleMenu()">INICIO</a></li>
+            <li><a href="#products" onclick="toggleMenu()">PRODUCTOS</a></li>
+            <li><a href="" onclick="toggleMenu()">QUIENES SOMOS</a></li>
+            <li><a href="#footer" onclick="toggleMenu()">CONTACTO</a></li>
           </ul>
         </div>
         <div>
           <div id="login" class="login">
-            <a href="#" onclick=showLogin(event) class="login-link">
+            <a onclick="showLogin(event)" class="login-link">
               <span class="material-symbols-outlined">login</span>
-                Iniciar sesión</a>
+              <p>Iniciar sesión</p></a
+            >
           </div>
-          <!-- <div id="icon_account">
-            <span onclick="" class="material-symbols-outlined">
-              account_circle
-              </span>
-          </div> -->
           <div id="icon_account" class="dropdown">
             <span onclick="toggleDropdown()" class="material-symbols-outlined">
               account_circle
             </span>
             <div id="dropdownContent" class="dropdown-content">
-              <a href="#" onclick=showLoginButton()>Cerrar sesión</a>
+              <a href="#" onclick="showLoginButton()">Cerrar sesión</a>
             </div>
           </div>
         </div>
-             <!-- Inicio de sesión -->
-             <div id="loginModal" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick=closeLogin()>&times;</span>
-                <h2>¡ Bienvenido !</h2>
-                <form onsubmit="return validarCredenciales()">                
-                  <input type="text" placeholder="Usuario" name="usuario" required>
-                  <input type="password" placeholder="Contraseña" name="contraseña" required>      
-                  <button type="submit">Iniciar sesión</button>          
-                </form>
-              <p>¿No tienes cuenta?<a href="">Registrate</a></p>
-              </div>
-            </div>
-
-
+      </div>
+      <!-- Inicio de sesión -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLogin()">&times;</span>
+          <h2>¡ Bienvenido !</h2>
+          <form onsubmit="return validarCredenciales()">
+            <input type="text" placeholder="Usuario" name="usuario" required />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              name="contraseña"
+              required
+            />
+            <button type="submit">Iniciar sesión</button>
+          </form>
+          <p>¿No tienes cuenta?<a href="">Registrate</a></p>
+        </div>
+      </div>
     </header>
 
     <section class="hero">
@@ -324,7 +337,7 @@
       </section>
     </main>
 
-        <footer id="footer" class="containerfooter">
+    <footer id="footer" class="containerfooter">
       <div>
         <h3>Nosotros</h3>
         <ul>
