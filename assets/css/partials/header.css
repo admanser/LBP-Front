@@ -31,7 +31,7 @@
   justify-content: space-between; /* Distribucion horizontal */
   align-items: center; /* Alineacion vertical*/
   background-color: var(--bg-solid-1);
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     var(--bg-solid-1),
     var(--secondary-300)
   ); /*Efecto degrade*/
@@ -41,10 +41,10 @@
 /* Formato logo */
 .Logo img {
   display: block;
-  width: 140px;
+  width: 70px;
   height: 70px;
   border-radius: 10px;
-  box-shadow: 0 0 6px 1px var(--secondary-500);
+  /*box-shadow: 0 0 6px 1px var(--secondary-500);*/
 }
 
 /* Formato menú */
@@ -90,6 +90,12 @@
 }
 
 /* Formato iniciar sesión */
+.login-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .login-link {
   display: flex;
   align-items: center;
@@ -177,22 +183,22 @@
 }
 
 /* Formato del formulario */
-form {
+.modal-content form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-input[type="text"],
-input[type="password"] {
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
   margin: 10px;
   padding: 8px;
   width: 300px;
   border: 2px solid var(--primary-300);
 }
 
-button {
+.modal-content button {
   background-color: #007bff;
   color: var(--secondary-solid);
   border: none;
@@ -202,7 +208,7 @@ button {
   width: 150px;
 }
 
-button:hover {
+.modal-content button:hover {
   background-color: #0056b3;
 }
 

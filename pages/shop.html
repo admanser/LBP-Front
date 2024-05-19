@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Barbara, CheCho, Guibo, Pau">
+  <meta name="description" content="Website_L.B.P-footwearWholesaler">
+  <meta name="keywords" content="Sandalias, Alpargatas, Calzado, Fabrica de calzado, Branding">
+  <!-- Tittle -->
+  <title>Home|L.B.P</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="../assets/multimedia/__favicon_website_footprint.png" type="image/x-icon">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/index.css">
+
+</head>
+
+<body class="container">
+
+  <main class="shopMain">
+
+    <!-- header -->
+    <header class="shopHeader">
+      <div class="navbar">
+        <div class="Logo"><a href="../index.html"><img src="../assets/multimedia/img/logoLbp.svg" alt=""></a></div>
+        <div class="menu">
+          <ul>
+            <li><a href="">INICIO</a></li>
+            <li class="dropdown"><a href="#">PRODUCTOS</a>
+              <div class="dropdown-items">
+                <a href="#">OJOTAS</a>
+                <a href="#">ALPARGATAS</a>
+              </div>
+            </li>
+            <li><a href="">QUIENES SOMOS</a></li>
+            <li><a href="">CONTACTO</a></li>
+          </ul>
+        </div>
+
+        <div class="login-container">
+          <div class="login">
+            <a href="#" onclick=showLogin(event) class="login-link">
+              <span class="material-symbols-outlined">Login</span>
+            </a>
+          </div>
+
+          <div class="login">
+            <a href="" class="login-link">
+              <span class="material-symbols-outlined">Sign Up</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Inicio de sesión -->
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick=closeLogin()>&times;</span>
+            <h2>¡ Bienvenido !</h2>
+            <form onsubmit="return validarCredenciales()">
+              <input type="text" placeholder="Usuario" name="usuario" required>
+              <input type="password" placeholder="Contraseña" name="contraseña" required>
+              <button type="submit">Iniciar sesión</button>
+            </form>
+            <p>¿No tienes cuenta?<a href="">Registrate</a></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Barra lateral-->
+    <aside class="asideShop shopAside">
+
+      <form class="formShop" method=""> <!--Formulario filtro de productos-->
+
+        <div class="sectionsForm">
+          <label for="buscar">Buscar</label> <br>
+          <input type="text" id="buscar" name="buscar" placeholder="Item o categoria">
+        </div><br>
+
+        <div class="sectionsForm">
+          <label for="precio">Precio</label> <br>
+          <p>Min <input type="number" id="form-precio" name="precio-min" placeholder="0"><br>Max<input type="number"
+              id="form-precio" name="precio-max" placeholder="0"></p>
+        </div><br>
+
+        <div class="sectionsForm">
+
+          <span for="filter">Filtrar</span><br>
+          <input type="checkbox" name="filter" id="news" value="Talles">
+          <label for="">Talles</label><br>
+          <input type="checkbox" name="filter" id="news" value="Categoria">
+          <label for="">Categoria</label><br>
+          <input type="checkbox" name="filter" value="Modelos">
+          <label for="">Modelos</label><br>
+          <input type="checkbox" name="filter" value="Colecciones">
+          <label for="">Colecciones</label><br>
+          <input type="checkbox" name="filter" value="Lanzamientos">
+          <label for="">Nuevos lanzamientos</label><br>
+          <input type="checkbox" name="filter" value="Favoritos">
+          <label for="">Mis Favoritos </label><br>
+
+        </div><br>
+
+      </form>
+
+    </aside>
+
+    <article class="main__shop shopArticle">
+      <div class="main__tittle__shop">
+        <h2>SHOP</h2>
+      </div><br>
+
+      <div class="barraSup">
+        <div>
+          <label for="orden">Ordenar por:</label>
+          <select class="OrderbyShop" name="orden">
+            <option value="Mas vendidos">Mas vendidos</option>
+            <option value="Por fecha de alta | Mas antiguos">Por fecha de alta | Mas antiguos</option>
+            <option value="Por fecha de alta | Ultimos">Por fecha de alta | Ultimos</option>
+            <option value="Por precio - Min|Max">Por precio - Min|Max</option>
+            <option value="Por precio - Max|Min">Por precio - Max|Min</option>
+          </select>
+        </div>
+
+        <div class="home">
+          <a href="..\.\index.html">HOME</a>
+        </div><br>
+      </div>
+
+      <section class="shop-container"> <!--shop-->
+
+        <div class="card">
+          <picture class="card-item__cover">
+            <img src="..\assets\multimedia\img\LBP\flipFlop_family\printed_line\adult's\ff_printed_adult's (1).jpeg"
+              alt="Producto 1">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 1</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <picture class="card-item__cover">
+            <img src="..\assets\multimedia\img\LBP\flipFlop_family\printed_line\adult's\ff_printed_adult's (2).jpeg"
+              alt="Producto 1">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 2</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <picture class="card-item__cover">
+            <img src="..\assets\multimedia\img\LBP\flipFlop_family\printed_line\adult's\ff_printed_adult's (3).jpeg"
+              alt="Producto 1">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 3</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <picture class="card-item__cover">
+            <img src="..\assets\multimedia\img\LBP\flipFlop_family\printed_line\adult's\ff_printed_adult's (4).jpeg"
+              alt="Producto 1">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 4</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <picture class="card-item__cover">
+            <img src="..\assets\multimedia\img\LBP\flipFlop_family\printed_line\adult's\ff_printed_adult's (5).jpeg"
+              alt="Producto 1">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 5</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+          </div>
+        </div>
+
+      </section>
+
+    </article>
+
+
+    <!-- footer -->
+    <footer class="containerfooter shopFooter">
+      <div>
+        <h3>Nosotros</h3>
+        <ul>
+          <li>Acerca de Nosotros</li>
+          <li>Nuestras Sucursales</li>
+          <li>Contacto</li>
+          <li>Trabajá con Nosotros</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Información</h3>
+        <li>Talles</li>
+        <li>Promociones de Compra</li>
+        <li>Cómo Comprar</li>
+        <li>Políticas de Cambio</li>
+        <li>Políticas de Devoluciones</li>
+        <li>Preguntas Frecuentes</li>
+        <li>Políticas de Privacidad</li>
+        <li>Botón de Arrepentimiento</li>
+      </div>
+      <div>
+        <div>
+          <h3>Clientes</h3>
+          <li>Ingresá o Registrate</li>
+          <li>Mi Cuenta</li>
+        </div>
+        <hr />
+        <div>CONTACTO</div>
+        <div><b> Pasar el nro de teléfono del lugar </b></div>
+        <hr />
+        <div>SEGUINOS (COLOCAR ICONOS DE REDES)</div>
+      </div>
+
+      <div>
+        <div>
+          <div>
+            <h3>SUSCRIBITE A NUESTRO NEWSLETTER</h3>
+            <div style="display: flex">
+              <input type="text" placeholder="Ingresá tu Email" />
+              <button>SUSCRIBIRME</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <hr />
+          <h2>MAPA DE UBICACIÓN</h2>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="../assets/js/carousel.js"></script>
+  <script src="../assets/js/login.js"></script>
+
+</body>
+
+</html>
