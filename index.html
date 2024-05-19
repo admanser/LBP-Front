@@ -1,367 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Metadatos -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Barbara, CheCho, Guibo, Pau" />
-    <meta name="description" content="Website_L.B.P-footwearWholesaler" />
-    <meta
-      name="keywords"
-      content="Sandalias, Alpargatas, Calzado, Fabrica de calzado, Branding"
-    />
-    <!-- Tittle -->
-    <title>Home|L.B.P</title>
-    <!--Favicon-->
-    <link
-      rel="shortcut icon"
-      href="./assets/multimedia/__favicon_website_footprint.png"
-      type="image/x-icon"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/index.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="navbar">
-        <div class="Logo"><a href="index.html"><img src="./assets/multimedia/img/logoLbp.svg" alt=""></a></div>
-        <div class="menu">        
-          <ul>
-            <li><a href="">INICIO</a></li>
-            <li class="dropdown"><a href="#">PRODUCTOS</a>
-              <div class="dropdown-items">
-                <a href="#">OJOTAS</a>
-                <a href="#">ALPARGATAS</a>
-              </div></li>
-            <li><a href="">QUIENES SOMOS</a></li>
-            <li><a href="">CONTACTO</a></li>
-          </ul>
-        </div>
-        <div class="login">
-          <a href="#" onclick=showLogin(event) class="login-link">
-            <span class="material-symbols-outlined">login</span>
-              Iniciar sesión</a>
-        </div>
+<head>
+  <!-- Metadatos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Barbara, CheCho, Guibo, Pau" />
+  <meta name="description" content="Website_L.B.P-footwearWholesaler" />
+  <meta name="keywords" content="Sandalias, Alpargatas, Calzado, Fabrica de calzado, Branding" />
+  <!-- Tittle -->
+  <title>Home|L.B.P</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="./assets/multimedia/__favicon_website_footprint.png" type="image/x-icon" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-             <!-- Inicio de sesión -->
-             <div id="loginModal" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick=closeLogin()>&times;</span>
-                <h2>¡ Bienvenido !</h2>
-                <form onsubmit="return validarCredenciales()">                
-                  <input type="text" placeholder="Usuario" name="usuario" required>
-                  <input type="password" placeholder="Contraseña" name="contraseña" required>      
-                  <button type="submit">Iniciar sesión</button>          
-                </form>
-              <p>¿No tienes cuenta?<a href="">Registrate</a></p>
-              </div>
-            </div>
+<body>
 
-
-    </header>
-
-    <section class="hero">
-      <!-- Hero -->
-
-      <div class="hero-content container">
-        <div class="text-container">
-          <h1>La Original L.B.P</h1>
-          <h2>Calzado con calidad de fábrica</h2>
-          <p>
-            Haz tu pedido de forma práctica, al mejor precio<br />
-            y recìbelo donde quieras
-          </p>
-          <a
-            class="btn-solid-lg"
-            onclick="dataLayer.push({'event': 'cta-whatsapp'});"
-            target="_blank"
-            href="https://wa.me/5491140279090?text=Hola%20LBP"
-            ><i class="streamline--whatsapp"></i>Pedir x Whatsapp</a
-          >
-        </div>
-        <!-- end of text-container -->
-
-        <div class="image-container">
-          <div class="img-wrapper">
-            <img
-              class="img-fluid"
-              src="./assets/multimedia/img/logoLbp.svg"
-              alt="Banner"
-            />
-          </div>
-          <!-- end of img-wrapper -->
-        </div>
-        <!-- end of image-container -->
-      </div>
-      <!-- end of hero-content -->
-
-      <svg
-        class="hero-frame"
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        viewBox="0 0 1920 310"
-      >
-        <defs>
-          <style>
-            .cls-1 {
-              fill: var(--bg-solid-1);
-            }
-          </style>
-        </defs>
-        <title>hero-frame</title>
-        <path
-          class="cls-1"
-          d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end of hero -->
-
-    <main class="main container">
-      <section class="collection">
-        <!-- Contenido de la coleccion de productos -->
-        <div class="main__tittle">
-          <h2>PRODUCTOS</h2>
-          <p>Consultar precios por cantidad</p>
-        </div>
-
-        <section class="collection__family">
-          <!--Espadrille-->
-          <article class="collection__content">
-            <h3 class="collection__tittle">Alpargatas</h3>
-            <p class="collection__text">Clásicas | Reforzadas</p>
-            <a class="collection__link" href="./pages/shop.html"
-              >VER COLECCION</a
-            >
-          </article>
-          <picture class="collection__cover">
-            <img
-              src="./assets/multimedia/img/sandals_front.png"
-              alt="Sandals"
-            />
-          </picture>
-        </section>
-
-        <section class="collection__family">
-          <!--Espadrille-->
-          <article class="collection__content">
-            <h3 class="collection__tittle">Ojotas</h3>
-            <p class="collection__text">Lisas | Estampadas</p>
-            <a class="collection__link" href="./pages/shop.html"
-              >VER COLECCION</a
-            >
-          </article>
-          <picture class="collection__cover">
-            <img
-              src="./assets/multimedia/img/flipFlop_front.JPEG"
-              alt="Sandals"
-            />
-          </picture>
-        </section>
-      </section>
-
-      <section class="newLaunches carousel">
-        <!--Lanzamientos-->
-
-        <div class="main__tittle">
-          <h2>NUEVOS PRODUCTOS</h2>
-        </div>
-
-        <div class="newLaunches_family carousel-container">
-          <div class="card carousel-item">
-            <picture class="card-item__cover">
-              <img
-                class="card-item__img--front"
-                src=".\assets\multimedia\img\novedades\ojotaNew.webp"
-                alt="Producto 1"
-              />
-              <img
-                class="card-item__img--back"
-                src=".\assets\multimedia\img\novedades\ojotaNew_back.webp"
-                alt="Producto 1 box"
-              />
-            </picture>
-            <div class="card-item__content">
-              <h3 class="card-item__name">Product-name 1</h3>
-              <p class="card-item__price">Precio: $XX.XX</p>
-              <p class="card-item__promo">3 Cuotas sin interes</p>
-            </div>
-          </div>
-
-          <div class="card carousel-item">
-            <picture class="card-item__cover">
-              <img
-                class="card-item__img--front"
-                src=".\assets\multimedia\img\novedades\ojotaNew2.webp"
-                alt="Producto 1"
-              />
-              <img
-                class="card-item__img--back"
-                src=".\assets\multimedia\img\novedades\ojotaNew2_back"
-                alt="Producto 1 box"
-              />
-            </picture>
-            <div class="card-item__content">
-              <h3 class="card-item__name">Product-name 2</h3>
-              <p class="card-item__price">Precio: $XX.XX</p>
-              <p class="card-item__promo">3 Cuotas sin interes</p>
-            </div>
-          </div>
-
-          <div class="card carousel-item">
-            <picture class="card-item__cover">
-              <img
-                class="card-item__img--front"
-                src=".\assets\multimedia\img\novedades\sandaliaNew.webp"
-                alt="Producto 1"
-              />
-              <img
-                class="card-item__img--back"
-                src=".\assets\multimedia\img\novedades\sandaliaNew_back"
-                alt="Producto 1 box"
-              />
-            </picture>
-            <div class="card-item__content">
-              <h3 class="card-item__name">Product-name 3</h3>
-              <p class="card-item__price">Precio: $XX.XX</p>
-              <p class="card-item__promo">3 Cuotas sin interes</p>
-            </div>
-          </div>
-
-          <div class="card carousel-item">
-            <picture class="card-item__cover">
-              <img
-                class="card-item__img--front"
-                src=".\assets\multimedia\img\novedades\sandaliaNew2.webp"
-                alt="Producto 1"
-              />
-              <img
-                class="card-item__img--back"
-                src=".\assets\multimedia\img\novedades\sandaliaNew2_back"
-                alt="Producto 1 box"
-              />
-            </picture>
-            <div class="card-item__content">
-              <h3 class="card-item__name">Product-name 4</h3>
-              <p class="card-item__price">Precio: $XX.XX</p>
-              <p class="card-item__promo">3 Cuotas sin interes</p>
-            </div>
-          </div>
-
-          <div class="card carousel-item hidden">
-            <picture class="card-item__cover">
-              <img
-                class="card-item__img--front"
-                src=".\assets\multimedia\img\novedades\pikachu-1.webp"
-                alt="Producto 1"
-              />
-              <img
-                class="card-item__img--back"
-                src=".\assets\multimedia\img\novedades\pikachu-box.webp"
-                alt="Producto 1 box"
-              />
-            </picture>
-            <div class="card-item__content">
-              <h3 class="card-item__name">Product-name 5</h3>
-              <p class="card-item__price">Precio: $XX.XX</p>
-              <p class="card-item__promo">3 Cuotas sin interes</p>
-            </div>
-          </div>
-
-          <!-- Repite para más productos -->
-        </div>
-        <button id="next">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1.2rem"
-            height="1.2rem"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none" fill-rule="evenodd">
-              <path
-                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
-              />
-              <path
-                fill="black"
-                d="M16.06 10.94a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 1 1-2.121-2.122L12.879 12L8.283 7.404a1.5 1.5 0 0 1 2.12-2.122l5.658 5.657Z"
-              />
-            </g>
-          </svg>
-        </button>
-        <button id="back">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1.2rem"
-            height="1.2rem"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none" fill-rule="evenodd">
-              <path
-                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
-              />
-              <path
-                fill="black"
-                d="M7.94 13.06a1.5 1.5 0 0 1 0-2.12l5.656-5.658a1.5 1.5 0 1 1 2.121 2.122L11.122 12l4.596 4.596a1.5 1.5 0 1 1-2.12 2.122l-5.66-5.658Z"
-              />
-            </g>
-          </svg>
-        </button>
-      </section>
-    </main>
-
-        <footer class="containerfooter">
-      <div>
-        <h3>Nosotros</h3>
+  <!-- header -->
+  <header class="container">
+    <div class="navbar">
+      <div class="Logo"><a href="index.html"><img src="./assets/multimedia/img/logoLbp.svg" alt=""></a></div>
+      <div class="menu">
         <ul>
-          <li>Acerca de Nosotros</li>
-          <li>Nuestras Sucursales</li>
-          <li>Contacto</li>
-          <li>Trabajá con Nosotros</li>
+          <li><a href="">INICIO</a></li>
+          <li class="dropdown"><a href="#">PRODUCTOS</a>
+            <div class="dropdown-items">
+              <a href="#">OJOTAS</a>
+              <a href="#">ALPARGATAS</a>
+            </div>
+          </li>
+          <li><a href="">QUIENES SOMOS</a></li>
+          <li><a href="">CONTACTO</a></li>
         </ul>
       </div>
-      <div>
-        <h3>Información</h3>
-        <li>Talles</li>
-        <li>Promociones de Compra</li>
-        <li>Cómo Comprar</li>
-        <li>Políticas de Cambio</li>
-        <li>Políticas de Devoluciones</li>
-        <li>Preguntas Frecuentes</li>
-        <li>Políticas de Privacidad</li>
-        <li>Botón de Arrepentimiento</li>
-      </div>
-      <div>
-        <div>
-          <h3>Clientes</h3>
-          <li>Ingresá o Registrate</li>
-          <li>Mi Cuenta</li>
+
+      <div class="login-container">
+        <div class="login">
+          <a href="#" onclick=showLogin(event) class="login-link">
+            <span class="material-symbols-outlined">Login</span>
+          </a>
         </div>
-        <hr />
-        <div>CONTACTO</div>
-        <div><b> Pasar el nro de teléfono del lugar </b></div>
-        <hr />
-        <div>SEGUINOS (COLOCAR ICONOS DE REDES)</div>
+
+        <div class="login">
+          <a href="" class="login-link">
+            <span class="material-symbols-outlined">Sign Up</span>
+          </a>
+        </div>
       </div>
 
-      <div>
-        <div>
-          <div>
-            <h3>SUSCRIBITE A NUESTRO NEWSLETTER</h3>
-            <div style="display: flex">
-              <input type="text" placeholder="Ingresá tu Email" />
-              <button>SUSCRIBIRME</button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <hr />
-          <h2>MAPA DE UBICACIÓN</h2>
+      <!-- Inicio de sesión -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick=closeLogin()>&times;</span>
+          <h2>¡ Bienvenido !</h2>
+          <form onsubmit="return validarCredenciales()">
+            <input type="text" placeholder="Usuario" name="usuario" required>
+            <input type="password" placeholder="Contraseña" name="contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+          </form>
+          <p>¿No tienes cuenta?<a href="">Registrate</a></p>
         </div>
       </div>
-    </footer>
-    <script src="./assets/js/login.js"></script>
-    <script src="./assets/js/index.js"></script>
-  </body>
+    </div>
+  </header>
+
+  <section class="hero"> <!-- Hero -->
+
+    <div class="hero-content container">
+
+      <div class="text-container">
+        <h1>La Original L.B.P</h1>
+        <h2>Calzado con calidad de fábrica</h2>
+        <p>Haz tu pedido de forma práctica, al mejor precio y recìbelo donde quieras</p>
+        <a class="btn-solid-lg" onclick="dataLayer.push({'event': 'cta-whatsapp'});" target="_blank"
+          href="https://wa.me/5491140279090?text=Hola%20LBP"><i class="streamline--whatsapp"></i>Pedir x
+          Whatsapp</a>
+      </div> <!-- end of text-container -->
+
+      <div class="image-container">
+        <div class="img-wrapper">
+          <img class="img-fluid" src="./assets/multimedia/img/logoLbp.svg" alt="Banner">
+        </div> <!-- end of img-wrapper -->
+      </div> <!-- end of image-container -->
+
+    </div> <!-- end of hero-content -->
+
+    <svg class="hero-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      viewBox="0 0 1920 310">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: var(--bg-solid-1);
+          }
+        </style>
+      </defs>
+      <title>hero-frame</title>
+      <path class="cls-1"
+        d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z">
+      </path>
+    </svg>
+
+  </section> <!-- end of hero -->
+
+  <main class="mainHome container">
+
+    <section class="collection"> <!-- Contenido de la coleccion de productos -->
+      <div class="main__tittle">
+        <h2>PRODUCTOS</h2>
+        <p>Consultar precios por cantidad</p>
+      </div>
+
+      <section class="collection__family"> <!-- Espadrille -->
+        <article class="collection__content">
+          <h3 class="collection__tittle">Alpargatas</h3>
+          <p class="collection__text">Clásicas | Reforzadas</p>
+          <a class="collection__link" href="./pages/shop.html">VER COLECCION</a>
+        </article>
+        <picture class="collection__cover">
+          <img src="./assets/multimedia/img/sandals_front.png" alt="alpargatas">
+        </picture>
+      </section>
+
+      <section class="collection__family"> <!-- Ojotas -->
+        <article class="collection__content">
+          <h3 class="collection__tittle">Ojotas</h3>
+          <p class="collection__text">Lisas | Estampadas</p>
+          <a class="collection__link" href="./pages/shop.html">VER COLECCION</a>
+        </article>
+        <picture class="collection__cover">
+          <img src="./assets/multimedia/img/flipFlop_front.JPEG" alt="ojotas">
+        </picture>
+      </section>
+
+      <section class="collection__family collection__mayorista"> <!-- Mayorista -->
+        <article class="collection__content">
+          <h3 class="collection__tittle">Compra Mayorista</h3>
+          <p class="collection__text">Envianos tu consulta por Whatsapp o solicitá presupuesto a traves de nuestro formulario</p>
+          <a class="collection__link" href="./pages/shop.html">SOLICITUD DE PRESUPUESTO</a>
+        </article>
+      </section>
+
+     
+
+    </section>
+
+    <section class="carousel"><!--Lanzamientos-->
+
+      <div class="main__tittle">
+        <h2>NUEVOS PRODUCTOS</h2>
+      </div>
+
+      <div class="carousel-container">
+
+        <div class="card carousel-item">
+          <picture class="card-item__cover">
+            <img class="card-item__img--front" src=".\assets\multimedia\img\novedades\ojotaNew.webp" alt="Producto 1">
+            <img class="card-item__img--back" src=".\assets\multimedia\img\novedades\ojotaNew_back.webp"
+              alt="Producto 1 box">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 1</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+            <p class="card-item__promo">3 Cuotas sin interes</p>
+          </div>
+        </div>
+
+        <div class="card carousel-item">
+          <picture class="card-item__cover">
+            <img class="card-item__img--front" src=".\assets\multimedia\img\novedades\ojotaNew2.webp" alt="Producto 1">
+            <img class="card-item__img--back" src=".\assets\multimedia\img\novedades\ojotaNew2_back"
+              alt="Producto 1 box">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 2</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+            <p class="card-item__promo">3 Cuotas sin interes</p>
+          </div>
+        </div>
+
+        <div class="card carousel-item">
+          <picture class="card-item__cover">
+            <img class="card-item__img--front" src=".\assets\multimedia\img\novedades\sandaliaNew.webp"
+              alt="Producto 1">
+            <img class="card-item__img--back" src=".\assets\multimedia\img\novedades\sandaliaNew_back"
+              alt="Producto 1 box">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 3</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+            <p class="card-item__promo">3 Cuotas sin interes</p>
+          </div>
+        </div>
+
+        <div class="card carousel-item">
+          <picture class="card-item__cover">
+            <img class="card-item__img--front" src=".\assets\multimedia\img\novedades\sandaliaNew2.webp"
+              alt="Producto 1">
+            <img class="card-item__img--back" src=".\assets\multimedia\img\novedades\sandaliaNew2_back"
+              alt="Producto 1 box">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 4</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+            <p class="card-item__promo">3 Cuotas sin interes</p>
+          </div>
+        </div>
+
+        <div class="card carousel-item hidden">
+          <picture class="card-item__cover">
+            <img class="card-item__img--front" src=".\assets\multimedia\img\novedades\pikachu-1.webp"
+              alt="Producto 1">
+            <img class="card-item__img--back" src=".\assets\multimedia\img\novedades\pikachu-box.webp"
+              alt="Producto 1 box">
+          </picture>
+          <div class="card-item__content">
+            <h3 class="card-item__name">Product-name 5</h3>
+            <p class="card-item__price">Precio: $XX.XX</p>
+            <p class="card-item__promo">3 Cuotas sin interes</p>
+          </div>
+        </div>
+
+        <!-- Repite para más productos -->
+      </div>
+      <button id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="black" d="M16.06 10.94a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 1 1-2.121-2.122L12.879 12L8.283 7.404a1.5 1.5 0 0 1 2.12-2.122l5.658 5.657Z"/></g></svg>
+      </button>
+      <button id="back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="black" d="M7.94 13.06a1.5 1.5 0 0 1 0-2.12l5.656-5.658a1.5 1.5 0 1 1 2.121 2.122L11.122 12l4.596 4.596a1.5 1.5 0 1 1-2.12 2.122l-5.66-5.658Z"/></g></svg>
+      </button>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="containerfooter container">
+    <div>
+      <h3>Nosotros</h3>
+      <ul>
+        <li>Acerca de Nosotros</li>
+        <li>Nuestras Sucursales</li>
+        <li>Contacto</li>
+        <li>Trabajá con Nosotros</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Información</h3>
+      <li>Talles</li>
+      <li>Promociones de Compra</li>
+      <li>Cómo Comprar</li>
+      <li>Políticas de Cambio</li>
+      <li>Políticas de Devoluciones</li>
+      <li>Preguntas Frecuentes</li>
+      <li>Políticas de Privacidad</li>
+      <li>Botón de Arrepentimiento</li>
+    </div>
+    <div>
+      <div>
+        <h3>Clientes</h3>
+        <li>Ingresá o Registrate</li>
+        <li>Mi Cuenta</li>
+      </div>
+      <hr />
+      <div>CONTACTO</div>
+      <div><b> Pasar el nro de teléfono del lugar </b></div>
+      <hr />
+      <div>SEGUINOS (COLOCAR ICONOS DE REDES)</div>
+    </div>
+
+    <div>
+      <div>
+        <div>
+          <h3>SUSCRIBITE A NUESTRO NEWSLETTER</h3>
+          <div style="display: flex">
+            <input type="text" placeholder="Ingresá tu Email" />
+            <button>SUSCRIBIRME</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <hr />
+        <h2>MAPA DE UBICACIÓN</h2>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/carousel.js"></script>
+  <script src="./assets/js/login.js"></script>
+
+</body>
+
 </html>
