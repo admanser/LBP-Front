@@ -41,14 +41,10 @@
 /* Formato logo */
 .Logo img {
   display: block;
-  width: 100px;
-  height: 90px;
-  margin-left: 30px;
-}
-/*Menu hamburguesa*/
-.menu-icon {
-  display: none;
-  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  /*box-shadow: 0 0 6px 1px var(--secondary-500);*/
 }
 
 /* Formato menú */
@@ -70,6 +66,27 @@
 
 .menu ul li a:hover {
   color: var(--bg-solid-3);
+}
+/*Menu desplegable Productos*/
+.dropdown-items {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 var(--primary-300);
+  z-index: 1;
+  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
+}
+
+.dropdown-items > a {
+  color: var(--secondary-solid);
+  padding: 12px 16px;
+  text-decoration: solid;
+  display: block;
+  font-size: x-small;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
 }
 
 /* Formato iniciar sesión */
@@ -99,69 +116,10 @@
   background-color: var(--primary-solid);
 }
 
-/*Icon login*/
+/*Icono login*/
 .material-symbols-outlined {
   margin-right: 5px;
   font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-/*Icon Account*/
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
-/* Formato Icon Account */
-#icon_account {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-}
-
-#icon_account span {
-  font-size: 40px;
-}
-
-#icon_account span:hover {
-  border-radius: 50%;
-  background-color: var(--primary-solid);
-  box-shadow: 0 0 5px 2px var(--secondary-500);
-}
-
-#icon_account {
-  display: none;
-}
-
-/*Dropdown account*/
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Formato Dropdown content */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 10px;
-  background-color: var(--secondary-900);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px var(--primary-solid);
-  z-index: 1;
-}
-
-/* Contenido del Dropdown */
-.dropdown-content a {
-  color: var(--primary-solid);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {
-  background-color: var(--primary-300);
-}
-
-/* Muestra el dropdown al hacer click */
-.show {
-  display: block;
 }
 
 /* Ventana Inicio sesion */
@@ -254,7 +212,7 @@
   background-color: #0056b3;
 }
 
-/*Responsive DISPOSITIVO con Width < 500px */
+/*Responsive dispositivo*/
 
 @media (width < 500px) {
   navbar {
@@ -266,83 +224,65 @@
     align-items: flex-start;
   }
   .Logo img {
-    width: 70px;
-    height: 65px;
-    margin-right: 10px;
-  }
-  /*Menu hamburguesa*/
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 85px; /* Ajusta según la altura de tu navbar */
-    right: 0;
-    background-color: var(--primary-300);
-    width: 100%;
-    box-shadow: 0 8px 16px var(--secondary-300);
-    z-index: 1;
+    width: 60px;
+    height: 35px;
+    border-radius: 1px;
+    box-shadow: 0 0 6px 1px var(--secondary-500);
   }
 
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Formato menú*/
   .menu > ul {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
+    align-items: center;
   }
 
   .menu ul > li {
-    text-align: left;
-    padding: 5px 10px;
-    list-style: none;
+    margin-right: 0px;
+    align-items: center;
+    margin-bottom: 5px;
   }
 
   .menu ul li > a {
-    display: block;
-    padding: 2px 5px;
-    text-decoration: none;
+    font-size: smaller;
+  }
+
+  .dropdown-items {
+    background-color: var(--primary-solid);
+    width: min-content;
+    height: min-content;
+  }
+
+  .dropdown-items > a {
     color: var(--secondary-solid);
-    font-size: small;
-  }
-
-  .menu li > a:hover {
-    background-color: var(--secondary-solid);
-  }
-
-  .menu-icon {
+    padding: 6px 12px;
+    text-decoration: solid;
     display: block;
+    font-size: x-small;
   }
 
-  /*Boton Login*/
   .login {
-    text-align: right;
-    justify-content: right;
-  }
-  .login a {
-    margin-right: 0;
-  }
-  .login a > p {
-    display: none;
+    padding: 1px 16px;
+    font-size: x-small;
+    width: min-content;
+    height: min-content;
   }
 
-  /*Icon Account*/
-
-  #icon_account {
-    text-align: right;
-    justify-content: right;
-    margin-right: 0;
-  }
-
-  /* Formato Dropdown content */
-  .dropdown-content {
-    right: 0x;
-    z-index: 1;
-    min-width: 120px;
-    background-color: var(--secondary-solid);
-  }
-
-  /* Contenido del Dropdown*/
-  .dropdown-content a {
-    padding: 12px 16px;
+  .login > a {
+    margin-right: 1px;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 30px;
+    border: 2px solid var(--secondary-solid);
     font-size: small;
   }
 
@@ -351,13 +291,15 @@
     overflow: auto;
     justify-content: center;
     align-items: center;
+    top: 50px;
   }
 
   .modal-content {
-    margin-top: 20%;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin: auto;
     padding: 2px;
+    width: min-content;
+    height: min-content;
+    align-content: center;
   }
 
   .modal-content > h2 {
@@ -389,7 +331,7 @@
     cursor: pointer;
   }
 
-  /* Formato del formulario Login*/
+  /* Formato del formulario */
   form {
     gap: 15px;
   }
