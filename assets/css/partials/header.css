@@ -31,7 +31,7 @@
   justify-content: space-between; /* Distribucion horizontal */
   align-items: center; /* Alineacion vertical*/
   background-color: var(--bg-solid-1);
-  /*background-image: linear-gradient(
+  background-image: linear-gradient(
     var(--bg-solid-1),
     var(--secondary-300)
   ); /*Efecto degrade*/
@@ -41,10 +41,14 @@
 /* Formato logo */
 .Logo img {
   display: block;
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-  /*box-shadow: 0 0 6px 1px var(--secondary-500);*/
+  width: 100px;
+  height: 90px;
+  margin-left: 30px;
+}
+/*Menu hamburguesa*/
+.menu-icon {
+  display: none;
+  cursor: pointer;
 }
 
 /* Formato menú */
@@ -67,35 +71,8 @@
 .menu ul li a:hover {
   color: var(--bg-solid-3);
 }
-/*Menu desplegable Productos*/
-.dropdown-items {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 var(--primary-300);
-  z-index: 1;
-  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
-}
-
-.dropdown-items > a {
-  color: var(--secondary-solid);
-  padding: 12px 16px;
-  text-decoration: solid;
-  display: block;
-  font-size: x-small;
-}
-
-.dropdown:hover .dropdown-items {
-  display: block;
-}
 
 /* Formato iniciar sesión */
-.login-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 .login-link {
   display: flex;
   align-items: center;
@@ -116,10 +93,69 @@
   background-color: var(--primary-solid);
 }
 
-/*Icono login*/
+/*Icon login*/
 .material-symbols-outlined {
   margin-right: 5px;
   font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/*Icon Account*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Formato Icon Account */
+#icon_account {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+#icon_account span {
+  font-size: 40px;
+}
+
+#icon_account span:hover {
+  border-radius: 50%;
+  background-color: var(--primary-solid);
+  box-shadow: 0 0 5px 2px var(--secondary-500);
+}
+
+#icon_account {
+  display: none;
+}
+
+/*Dropdown account*/
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Formato Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: var(--secondary-900);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--primary-solid);
+  z-index: 1;
+}
+
+/* Contenido del Dropdown */
+.dropdown-content a {
+  color: var(--primary-solid);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: var(--primary-300);
+}
+
+/* Muestra el dropdown al hacer click */
+.show {
+  display: block;
 }
 
 /* Ventana Inicio sesion */
@@ -183,22 +219,22 @@
 }
 
 /* Formato del formulario */
-.modal-content form {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="password"] {
+input[type="text"],
+input[type="password"] {
   margin: 10px;
   padding: 8px;
   width: 300px;
   border: 2px solid var(--primary-300);
 }
 
-.modal-content button {
+button {
   background-color: #007bff;
   color: var(--secondary-solid);
   border: none;
@@ -208,11 +244,11 @@
   width: 150px;
 }
 
-.modal-content button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-/*Responsive dispositivo*/
+/*Responsive DISPOSITIVO con Width < 500px */
 
 @media (width < 500px) {
   navbar {
@@ -224,65 +260,83 @@
     align-items: flex-start;
   }
   .Logo img {
-    width: 60px;
-    height: 35px;
-    border-radius: 1px;
-    box-shadow: 0 0 6px 1px var(--secondary-500);
+    width: 70px;
+    height: 65px;
+    margin-right: 10px;
   }
-
+  /*Menu hamburguesa*/
   .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 85px; /* Ajusta según la altura de tu navbar */
+    right: 0;
+    background-color: var(--primary-300);
+    width: 100%;
+    box-shadow: 0 8px 16px var(--secondary-300);
+    z-index: 1;
   }
 
-  /* Formato menú*/
   .menu > ul {
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .menu ul > li {
-    margin-right: 0px;
-    align-items: center;
-    margin-bottom: 5px;
+    text-align: left;
+    padding: 5px 10px;
+    list-style: none;
   }
 
   .menu ul li > a {
-    font-size: smaller;
-  }
-
-  .dropdown-items {
-    background-color: var(--primary-solid);
-    width: min-content;
-    height: min-content;
-  }
-
-  .dropdown-items > a {
-    color: var(--secondary-solid);
-    padding: 6px 12px;
-    text-decoration: solid;
     display: block;
-    font-size: x-small;
-  }
-
-  .login {
-    padding: 1px 16px;
-    font-size: x-small;
-    width: min-content;
-    height: min-content;
-  }
-
-  .login > a {
-    margin-right: 1px;
+    padding: 2px 5px;
     text-decoration: none;
-    padding: 4px;
-    border-radius: 30px;
-    border: 2px solid var(--secondary-solid);
+    color: var(--secondary-solid);
+    font-size: small;
+  }
+
+  .menu li > a:hover {
+    background-color: var(--secondary-solid);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /*Boton Login*/
+  .login {
+    text-align: right;
+    justify-content: right;
+  }
+  .login a {
+    margin-right: 0;
+  }
+  .login a > p {
+    display: none;
+  }
+
+  /*Icon Account*/
+
+  #icon_account {
+    text-align: right;
+    justify-content: right;
+    margin-right: 0;
+  }
+
+  /* Formato Dropdown content */
+  .dropdown-content {
+    right: 0x;
+    z-index: 1;
+    min-width: 120px;
+    background-color: var(--secondary-solid);
+  }
+
+  /* Contenido del Dropdown*/
+  .dropdown-content a {
+    padding: 12px 16px;
     font-size: small;
   }
 
@@ -291,15 +345,13 @@
     overflow: auto;
     justify-content: center;
     align-items: center;
-    top: 50px;
   }
 
   .modal-content {
-    margin: auto;
+    margin-top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
     padding: 2px;
-    width: min-content;
-    height: min-content;
-    align-content: center;
   }
 
   .modal-content > h2 {
@@ -331,7 +383,7 @@
     cursor: pointer;
   }
 
-  /* Formato del formulario */
+  /* Formato del formulario Login*/
   form {
     gap: 15px;
   }
