@@ -14,7 +14,7 @@ function showLoginButton() {
 function showLogin(event) {
   event.preventDefault();
   var modal = document.getElementById("loginModal");
-  if (event.target.closest(".login-link")) {
+  if (event.target.closest(".login")) {
     modal.style.display = "block";
   }
 }
@@ -24,18 +24,18 @@ function closeLogin() {
   modal.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const loginLink = document.querySelector(".login-link");
-  loginLink.addEventListener("click", showLogin);
+// document.addEventListener("DOMContentLoaded", function () {
+//   const loginLink = document.querySelector(".login-link");
+//   loginLink.addEventListener("click", showLogin);
 
-  // Event listener para cerrar el modal cuando se haga click fuera del contenido del modal
-  window.addEventListener("click", function (event) {
-    var modal = document.getElementById("loginModal");
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-});
+//   // Event listener para cerrar el modal cuando se haga click fuera del contenido del modal
+//   window.addEventListener("click", function (event) {
+//     var modal = document.getElementById("loginModal");
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   });
+// });
 
 // Mostrar u ocultar botón Account
 function showIconAccount() {
