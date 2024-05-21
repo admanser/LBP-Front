@@ -4,8 +4,8 @@ document.getElementById("next").addEventListener("click", () => {
   const firstItem = items[0];
   const hiddenItem = carouselContainer.querySelector(".hidden");
 
-  // Mover el primer item visible al final
-  carouselContainer.appendChild(firstItem);
+// Login
+import { initLogin } from './login.js';
 
   // Mostrar el item oculto y ocultar el primer item visible
   if (hiddenItem) {
@@ -44,4 +44,3 @@ document.getElementById("back").addEventListener("click", () => {
     // Y ocultamos el nuevo último elemento visible
     items[items.length - 2].classList.add("hidden");
   }
-});

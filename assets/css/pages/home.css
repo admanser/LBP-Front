@@ -121,9 +121,10 @@ img {
 
 /* MAIN */
 
-.main {
+.mainHome {
   background-color: var(--bg-solid-2);
   margin-top: -2rem;
+  padding-bottom: 2rem;
   padding-top: 6rem;
 }
 
@@ -132,7 +133,7 @@ img {
 text-align: center;
 color: var(--secondary-900);
 margin: 2rem 0 2rem 0;
-font-size: var(--font-large);
+font-size: var(--font-medium);
 }
 
 /* COLLECTION */
@@ -160,7 +161,6 @@ border-radius: 1rem;
 .collection__content {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 
@@ -168,6 +168,7 @@ border-radius: 1rem;
   font-family: var(--alternative-font);
   font-size: var(--font-display);
   font-weight: 500;
+  text-align: center;
 }
 
 .collection__text {
@@ -176,6 +177,7 @@ border-radius: 1rem;
   padding: 0.5rem 0 0.5rem 0;
   border-bottom: 2px solid var(--primary-solid);
   font-size: var(--font-medium);
+  text-align: center;
 }
 
 .collection__link {
@@ -211,18 +213,10 @@ border-radius: 1rem;
   border-radius: 1rem;
 width: 75%;}
 
-/* NEW LAUNCHES */
-
-/*.newLaunches {
-  display: flex;
-  flex-direction: column;
- } Es reemplazado por el carousel*/
-
- /*.newLaunches_family {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);  Distribuir en 4 columnas 
-  gap: var(--spacing-16);
-  margin-bottom: var(--spacing-16);
-  overflow: hidden; /* Para ocultar las tarjetas que están fuera de la vista 
-  position: relative;
-} Es reemplazado por corousel-container/*
+.collection__mayorista{
+  background-image: url(../../../assets/multimedia/img/Mayorista.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem;
+}
