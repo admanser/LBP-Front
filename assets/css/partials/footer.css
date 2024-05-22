@@ -42,25 +42,25 @@ footer h3 {
 }
 
 .facebook path:hover {
-  fill: #3b5998;
-  box-shadow: 0 0 15px #3b5998;
-  transition: all 0.2s ease;
+  fill: #1877f2;
+  box-shadow: 0 0 15px #1877f2;
+  transition: all 0.1s ease;
 }
 
 .instagram path:hover {
   fill: #bc2a8d;
   box-shadow: 0 0 15px #bc2a8d;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .youtube path:hover {
   fill: #ff0000;
   box-shadow: 0 0 15px #ff0000;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .whatsapp path:hover {
   fill: #4dc247;
   box-shadow: 0 0 15px #4dc247;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
