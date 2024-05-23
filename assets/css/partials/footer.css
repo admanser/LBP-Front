@@ -1,10 +1,6 @@
-@import url("./normalize.css");
+@import url("../misc/normalize.css");
 
-/* main {
-  height: 400px;
-} */
-
-.containerfooter {
+#footer {
   display: flex;
   gap: 0.5rem;
   justify-content: space-evenly;
@@ -14,6 +10,7 @@
   border-top: 20px;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
