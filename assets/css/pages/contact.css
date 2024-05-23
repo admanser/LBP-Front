@@ -7,13 +7,9 @@
   font-family: var(--alternative-font);
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
-main {
+
+.mainContact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +95,7 @@ main {
   background: #4dc247;
 }
 
-form {
+.formContact {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -166,7 +162,7 @@ form {
   color: var(--bg-solid-3);
 }
 
-form > button {
+.formContact > button {
   width: 100%;
   padding: 10px;
   outline: none;
@@ -178,7 +174,7 @@ form > button {
   font-size: 1rem;
 }
 
-form > button:hover,
+.formContact > button:hover,
 .links > a:hover {
   background: rgb(172, 16, 47);
 }
