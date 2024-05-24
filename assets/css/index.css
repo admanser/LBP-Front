@@ -6,7 +6,7 @@
 @import url("./misc/animations.css");
 
 /* PARTIALS */
-/* @import url('./partials/header.css'); */
+@import url("./partials/header.css");
 @import url("./partials/footer.css");
 @import url("./partials/header.css");
 
@@ -19,4 +19,4 @@
 @import url("./pages/nosotros.css");
 @import url("./pages/citas.css");
 @import url("./pages/shop.css");
-/* @import url("./pages/contact.css"); */
+@import url("./pages/terminos_condiciones.css");
