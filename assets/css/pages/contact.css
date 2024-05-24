@@ -1,9 +1,9 @@
 @import url("/assets/css/misc/normalize.css");
 
 * {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
   font-family: var(--alternative-font);
 }
 
@@ -13,17 +13,17 @@
   width: 100%;
 }
 
-main {
+.main_contact {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background: linear-gradient(rgba(0 0 0 / 0.8), rgba(0 0 0 / 0.8)),
     url(/assets/multimedia/img/bg.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-top: 8rem;
-  padding-bottom: 25rem;
+  padding-top: 2rem;
+  padding-bottom: var(--spacing-36);
 }
 
 .contain_contact {
@@ -31,7 +31,7 @@ main {
   grid-template-columns: repeat(2, 50%);
   padding: 30px;
   gap: 10px;
-  width: 1200px;
+  padding-bottom: 24rem;
 }
 
 .box-info {
@@ -166,7 +166,7 @@ form {
   color: var(--bg-solid-3);
 }
 
-form > button {
+.send {
   width: 100%;
   padding: 10px;
   outline: none;
@@ -178,7 +178,7 @@ form > button {
   font-size: 1rem;
 }
 
-form > button:hover,
+.send:hover,
 .links > a:hover {
   background: rgb(172, 16, 47);
 }
