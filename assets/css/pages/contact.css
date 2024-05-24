@@ -7,12 +7,6 @@
   font-family: var(--alternative-font);
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
 .main_contact {
   display: flex;
   justify-content: center;
