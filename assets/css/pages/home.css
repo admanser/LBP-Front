@@ -1,3 +1,16 @@
+.homepageMain {
+  display: grid;
+  grid-template-areas:
+  "head"
+  "home"
+  "foot";
+  grid-template-rows: auto auto auto;
+}
+
+.homeHeader {  grid-area: head; }
+.homeSection {  grid-area: home; }
+.homeFooter {  grid-area: foot; }
+
 /* HERO */
 .hero {
   position: relative;
