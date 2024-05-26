@@ -1,16 +1,26 @@
-.shopMain {
+.shopPage {
   display: grid;
   grid-template-areas:
-  "head head head"
-  "side shop shop"
-  "foot foot foot";
+  "head"
+  "shop"
+  "foot";
   grid-template-rows: auto auto auto;
 }
 
 .shopHeader {  grid-area: head; }
-.shopAside {  grid-area: side; }
-.shopArticle {  grid-area: shop; }
+.shopSection {  grid-area: shop; }
 .shopFooter {  grid-area: foot; }
+
+.shop {
+  display: grid;
+  grid-template-areas:
+  "aside product product";
+  grid-template-rows: auto;
+}
+
+.shopAside {  grid-area: aside; }
+.shopArticle{  grid-area: product; }
+
 
 /* Main */
 
