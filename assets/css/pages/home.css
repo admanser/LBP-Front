@@ -1,18 +1,46 @@
-/* HERO */
+.homepage {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "home"
+    "foot";
+  grid-template-rows: auto auto auto;
+}
+
+.homeHeader {
+  grid-area: head;
+}
+
+.homeSection {
+  grid-area: home;
+}
+
+.homeFooter {
+  grid-area: foot;
+}
+
+/* Hero */
 .hero {
   position: relative;
   background-color: var(--bg-solid-1);
   color: var(--secondary-900);
 }
 
+/* Estilos base (Mobile-First) */
 .hero-content {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: var(--spacing-68);
-  padding-bottom: var(--spacing-36);
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding-top: var(--spacing-36);
+  padding-bottom: var(--spacing-18);
   gap: 1rem;
 }
+
+
+
+
+
 
 .text-container {
   display: flex;
@@ -100,27 +128,21 @@ img {
   /* Ajusta el valor de z-index según sea necesario */
 }
 
-/* Hero Responsive */
-
-/* Para pantallas grandes (mayor o igual a 1200px) */
-/*@media screen and (mix-width: 1200px) {
-  .hero .hero-content {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .image-container {
-    width: 60%;  Ajusta el tamaño de la imagen según sea necesario 
-  }
-
-  .image-container img {
-    width: 100%;  Ajusta el tamaño de la imagen según sea necesario 
-  }
-}*/
 
 
-/* MAIN */
 
+
+
+.image-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* Main */
 .mainHome {
   background-color: var(--bg-solid-2);
   margin-top: -2rem;
@@ -130,32 +152,33 @@ img {
 
 .main__tittle {
   font-family: var(--base-font);
-text-align: center;
-color: var(--secondary-900);
-margin: 2rem 0 2rem 0;
-font-size: var(--font-medium);
+  text-align: center;
+  color: var(--secondary-900);
+  margin: 2rem 0 2rem 0;
+  font-size: var(--font-medium);
 }
 
-/* COLLECTION */
-
+/* Collection */
 .collection {
   display: flex;
   flex-direction: column;
- }
-
-.collection__family {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 0.5rem 0 0.5rem 0;
-background-color: var(--bg-solid-3);
-border-radius: 1rem;
 }
 
+
+
+
+
+.collection__family {
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
 .collection__family:nth-child(even) .collection__cover {
-  order: -1; 
+  order: -1;
 }
 
 .collection__content {
@@ -198,25 +221,83 @@ border-radius: 1rem;
 
 .collection__link:hover {
   background-color: var(--bg-solid-1);
-  
   border-color: var(--bg-solid-1);
 }
 
 .collection__cover {
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  align-items: center;
+  /* Centrar verticalmente */
 }
 
 .collection__cover img {
   border: var(--bg-solid-2) 8px solid;
   border-radius: 1rem;
-width: 75%;}
+  width: 75%;
+}
 
-.collection__mayorista{
+.collection__mayorista {
   background-image: url(../../../assets/multimedia/img/Mayorista.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 1.5rem;
+}
+
+
+
+
+/* Media Queries */
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: var(--spacing-68);
+    padding-bottom: var(--spacing-36);
+  }
+
+  .image-container {
+    width: 50%;
+  }
+
+  .collection__family {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* PC de escritorio */
+@media screen and (min-width: 1024px) {
+  .hero-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: var(--spacing-68);
+    padding-bottom: var(--spacing-36);
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .image-container {
+    width: 60%;
+  }
+
+  .collection__family {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: var(--bg-solid-3);
+    border-radius: 1rem;
+  }
+
+  .collection__cover img {
+    border: var(--bg-solid-2) 8px solid;
+    border-radius: 1rem;
+    width: 75%;
+  }
 }
