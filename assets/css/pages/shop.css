@@ -1,57 +1,63 @@
 .shopPage {
   display: grid;
   grid-template-areas:
-  "head"
-  "shop"
-  "foot";
+    "head"
+    "shop"
+    "foot";
   grid-template-rows: auto auto auto;
 }
 
-.shopHeader {  grid-area: head; }
-.shopSection {  grid-area: shop; }
-.shopFooter {  grid-area: foot; }
+.homeHeader {
+  grid-area: head;
+}
+.shopSection {
+  grid-area: shop;
+}
+.shopFooter {
+  grid-area: foot;
+}
 
 .shop {
   display: grid;
-  grid-template-areas:
-  "aside product product";
+  grid-template-areas: "aside product product";
   grid-template-rows: auto;
 }
 
-.shopAside {  grid-area: aside; }
-.shopArticle{  grid-area: product; }
-
+.shopAside {
+  grid-area: aside;
+}
+.shopArticle {
+  grid-area: product;
+}
 
 /* Main */
 
 .main__shop {
   background-color: var(--bg-solid-2);
   padding: 1rem;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .main__tittle__shop {
-font-family: var(--base-font);
-text-align: center;
-color: var(--secondary-900);
-font-size: var(--font-medium);
+  font-family: var(--base-font);
+  text-align: center;
+  color: var(--secondary-900);
+  font-size: var(--font-medium);
 }
 
-.barraSup{
+.barraSup {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 .home {
-  
   background-color: var(--bg-solid-1);
   color: var(--secondary-900);
   font-size: var(--font-small);
   padding: 0.5rem 0 0.5rem 0.5rem;
   border-radius: 10px;
   margin-left: 1rem;
-
 }
 
 /* Main - Ordenar por */
@@ -63,7 +69,6 @@ font-size: var(--font-medium);
   padding: 0.5rem 0 0.5rem 0.5rem;
   border-radius: 10px;
   margin-left: 1rem;
-  
 }
 
 .OrderbyShop option {
@@ -72,12 +77,13 @@ font-size: var(--font-medium);
   font-family: var(--alternative-font);
 }
 
-.OrderbyShop select option:hover { /* Estilo para la opción seleccionada */
+.OrderbyShop select option:hover {
+  /* Estilo para la opción seleccionada */
   background-color: var(--bg-solid-4); /* Fondo de la opción seleccionada */
   color: var(--secondary-900); /* Color del texto de la opción seleccionada */
 }
 
-.shop-container{
+.shop-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
@@ -98,7 +104,6 @@ font-size: var(--font-medium);
   margin: 0 1rem 0 1rem;
   padding: 2rem 1rem 1rem 1rem;
   box-sizing: border-box;
-  
 }
 
 .formShop label {
@@ -135,19 +140,18 @@ font-size: var(--font-medium);
 }
 
 #form-precio {
-
   border: 2px solid var(--bg-solid-1);
   border-radius: 6px;
   font-family: var(--base-font);
- width: 10rem;
+  width: 10rem;
   font-weight: 500;
   font-size: var(--font-xsmall);
- margin: 0 0.25rem 0 0.25rem;
+  margin: 0 0.25rem 0 0.25rem;
   color: var(--primary-900);
   text-align: center;
 }
 
-.sectionsForm{
+.sectionsForm {
   border: 1px solid var(--bg-solid-1);
   border-radius: 10px;
   padding: 0.5rem;

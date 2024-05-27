@@ -248,16 +248,13 @@
   background-color: #0056b3;
 }
 
-/*Responsive DISPOSITIVO con Width < 500px */
+/*Responsive DISPOSITIVO con Width < 600px */
 
-@media (width < 500px) {
-  navbar {
+@media screen and (max-width: 600px) {
+  .homeHeader > .navbar {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: row;
+    width: 55%;
   }
   .Logo img {
     width: 70px;
@@ -341,31 +338,37 @@
   }
 
   /*Ventana Inicio de Sesion*/
-  .modal {
+  /* .modal {
     overflow: auto;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
+  .homeHeader > .modal-content,
   .modal-content {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
     margin-top: 20%;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
     padding: 2px;
   }
 
+  .homeHeader .modal-content > h2,
   .modal-content > h2 {
     font-size: larger;
     text-align: center;
     padding: 15px;
   }
 
+  .homeHeader .modal-content > p,
   .modal-content > p {
     font-size: x-small;
     text-align: center;
     padding: 15px;
   }
-
+  .homeHeader .modal-content p > a,
   .modal-content p > a {
     font-size: small;
     text-align: center;
