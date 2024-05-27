@@ -254,7 +254,7 @@
   .homeHeader > .navbar {
     display: flex;
     flex-direction: row;
-    width: 55%;
+    width: 100%;
   }
   .Logo img {
     width: 70px;
